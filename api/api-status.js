@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (data.status === 'idle') {
         statusDot.style.backgroundColor = 'green';
-        statusDot.title = 'Scraper is idle';
+        statusDot.title = 'Idle';
       } else if (data.status === 'active') {
         statusDot.style.backgroundColor = 'yellow';
-        statusDot.title = 'Scraper is active';
+        statusDot.title = 'Active';
       } else {
         statusDot.style.backgroundColor = 'gray';
         statusDot.title = 'Unknown';
