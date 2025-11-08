@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const res = await fetch('https://sc-news.api.dalu-wins.de/patch-notes/status');
       const data = await res.json();
 
-      if (data.status === 'active') {
+      if (data.status === 'idle') {
         statusDot.style.backgroundColor = 'green';
-        statusDot.title = 'Active';
-      } else if (data.status === 'idle') {
+        statusDot.title = 'Scraper is idle';
+      } else if (data.status === 'active') {
         statusDot.style.backgroundColor = 'yellow';
-        statusDot.title = 'Idle';
+        statusDot.title = 'Scraper is active';
       } else {
         statusDot.style.backgroundColor = 'gray';
         statusDot.title = 'Unknown';
@@ -26,6 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // initial
   updateApiStatus();
-  // alle 30 Sekunden
-  setInterval(updateApiStatus, 30000);
+  // alle 1 Sekunden
+  setInterval(updateApiStatus, 1000);
 });
