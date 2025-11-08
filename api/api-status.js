@@ -1,10 +1,10 @@
 async function updateApiStatus() {
-  const statusDot = document.getElementById('api-status-dot');
+  const statusDot = document.getElementById('sc-news-api-status-dot');
   if (!statusDot) return;
 
   try {
     const res = await fetch('https://sc-news.api.dalu-wins.de/patch-notes/status');
-    const data = await res.json(); // erwartet { "status": "idle" } oder { "status": "active" }
+    const data = await res.json();
 
     if (data.status === 'active') {
       statusDot.style.backgroundColor = 'green';

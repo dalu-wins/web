@@ -74,6 +74,12 @@ header p {
   margin: 0 auto;
 }
 
+.api-title {
+  display: flex;
+  align-items: center; /* vertikal zentrieren */
+  gap: 0.5rem;         /* Abstand zwischen Dot und Text */
+}
+
 .status-dot {
   display: inline-block;
   width: 12px;
